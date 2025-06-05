@@ -4,7 +4,7 @@ const multer  = require('multer');
 const upload = multer();
 var app = express();
 
-app.use(cors());
+app.use(cors({ origin: 'https://www.freecodecamp.org' }));
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.get('/', function (_req, res) {
